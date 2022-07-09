@@ -1,3 +1,7 @@
 ﻿UserSettings
 Library
 Logs
+.idea
+Temp
+*.sln
+obj
