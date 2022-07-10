@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.leopotam.ecs": "file:../Module/GameBasis/Module/LeoECS",
+    "com.mk.gamebasis": "file:../Module/GameBasis/Assets/ExportPackage",
     "com.unity.collab-proxy": "1.15.18",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.14",
@@ -10,6 +12,7 @@
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.8",
+    "com.voody.unileo": "file:../Module/GameBasis/Module/UniLeo",
     "net.tomweiland.riptidenetworking": "https://github.com/tom-weiland/RiptideNetworking.git?path=/UnityPackage#v1.2.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

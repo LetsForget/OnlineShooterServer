@@ -20,10 +20,9 @@ namespace Network
  
         private void Start()
         {
+            Server = new Server();
             RiptideLogger.Initialize(Debug.Log, Debug.Log, Debug.LogWarning, Debug.LogError, false);
             
-            Server = new Server();
-
             RunStopButton.onClick.AddListener(RunStopServer);
         }
 

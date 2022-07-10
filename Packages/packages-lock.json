@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "com.leopotam.ecs": {
+      "version": "file:../Module/GameBasis/Module/LeoECS",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.mk.gamebasis": {
+      "version": "file:../Module/GameBasis/Assets/ExportPackage",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.18",
       "depth": 0,
@@ -154,6 +166,12 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.voody.unileo": {
+      "version": "file:../Module/GameBasis/Module/UniLeo",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
     },
     "net.tomweiland.riptidenetworking": {
       "version": "https://github.com/tom-weiland/RiptideNetworking.git?path=/UnityPackage#v1.2.0",
