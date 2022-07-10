@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   portField: {fileID: 1648686371}
   RunStopButton: {fileID: 802387801}
-  RunStopText: {fileID: 742770059}
+  RunStopText: {fileID: 1313539858}
 --- !u!1 &1423898191
 GameObject:
   m_ObjectHideFlags: 0

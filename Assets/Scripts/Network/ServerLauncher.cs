@@ -26,11 +26,25 @@ namespace Network
             RunStopButton.onClick.AddListener(RunStopServer);
         }
 
+        private void FixedUpdate()
+        {
+            Server.Tick();
+        }
+
+        private void OnDestroy()
+        {
+            if (Server.IsRunning)
+            {
+                Server.Stop();
+            }
+        }
+        
         private void RunStopServer()
         {
             if (Server.IsRunning)
             {
                 Server.Stop();
+                Server.MessageReceived -= OnMessageReceived;
                 
                 portField.interactable = true;
                 RunStopText.text = "Run";
@@ -44,18 +58,18 @@ namespace Network
                 
                 var port = Convert.ToUInt16(portField.text);
                 Server.Start(port, MAX_PLAYERS);
+                Server.MessageReceived += OnMessageReceived;
                 
                 portField.interactable = false;
                 RunStopText.text = "Stop";
             }
         }
 
-        private void OnDestroy()
+        private void OnMessageReceived(object sender, ServerMessageReceivedEventArgs e)
         {
-            if (Server.IsRunning)
-            {
-                Server.Stop();
-            }
+         
         }
+
+
     }
 }

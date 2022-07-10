@@ -41,20 +41,20 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\BaseMonoProvider.cs" />
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\IConvertToEntity.cs" />
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\ConvertToEntity.cs" />
+     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsWorld.cs" />
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\MonoProvider.cs" />
+     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsFilter.cs" />
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\ConversionSystemExtension.cs" />
+     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsComponent.cs" />
+     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsHelpers.cs" />
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\World\Systems\WorldInitSystem.cs" />
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\World\Components\InstantiateComponent.cs" />
+     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\WorldHandler.cs" />
      <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsSystem.cs" />
      <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsEntity.cs" />
-     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsFilter.cs" />
-     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsWorld.cs" />
-     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsHelpers.cs" />
-     <Compile Include="Module\GameBasis\Module\LeoECS\src\EcsComponent.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\ConversionSystemExtension.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\BaseMonoProvider.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\ConvertToEntity.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\MonoProvider.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\World\Components\InstantiateComponent.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\IConvertToEntity.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\MonoHelpers\WorldHandler.cs" />
-     <Compile Include="Module\GameBasis\Module\UniLeo\Runtime\World\Systems\WorldInitSystem.cs" />
      <None Include="Module\GameBasis\Module\LeoECS\package.json" />
      <None Include="Module\GameBasis\Module\LeoECS\Leopotam.Ecs.asmdef" />
      <None Include="Module\GameBasis\Module\UniLeo\Leopotam.Ecs.asmref" />
