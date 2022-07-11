@@ -51,7 +51,16 @@ namespace Network
         
         private void OnMessageReceived(object sender, ServerMessageReceivedEventArgs e)
         {
-
+            switch (e.MessageId)
+            {
+                case 1:
+                {
+                    var characterMovementUpdate = CharacterMovementUpdateMessage.Convert(e.Message);
+                    ecsProvider.AddUpdate(characterMovementUpdate);
+                    Server.SendToAll(e.Message);
+                    break;
+                }
+            }
         }
     }
 }

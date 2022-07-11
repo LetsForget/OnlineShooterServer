@@ -55,7 +55,6 @@
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\DebugInputSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\LocalPlayerTagProvider.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\BaseEcsProvider.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\NetworkSystem\NetworkSendSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\InputSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\CharacterMovementComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\InputComponent.cs" />
@@ -65,6 +64,8 @@
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\SpawnSystem\DestroyComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Messages\PlayerSpawnMessage.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Messages\PlayerDestroyMessage.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\SpawnSystem\ClientIdSetterSystem.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\PlayersList.cs" />
      <None Include="Module\GameBasis\Assets\ExportPackage\package.json" />
      <None Include="Module\GameBasis\Assets\ExportPackage\GameBasis.asmdef" />
      <Reference Include="UnityEngine">

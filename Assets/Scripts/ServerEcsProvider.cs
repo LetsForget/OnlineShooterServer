@@ -16,7 +16,6 @@ public class ServerEcsProvider : BaseEcsProvider
         }
     }
 
-
     public void SpawnPlayer(ushort clientId)
     {
         SpawnSystem.Spawn(clientId, Vector3.zero);
@@ -25,5 +24,10 @@ public class ServerEcsProvider : BaseEcsProvider
     public void DestroyPlayer(ushort clientId)
     {
         SpawnSystem.Destroy(clientId);
+    }
+
+    public void AddUpdate(CharacterMovementUpdate update)
+    {
+        UpdateReceiveSystem.AddUpdate(update);
     }
 }
