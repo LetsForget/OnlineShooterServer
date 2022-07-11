@@ -20,7 +20,7 @@ namespace Network
             Server.MessageReceived += OnMessageReceived;
         }
         
-        private void FixedUpdate()
+        private void Update()
         {
             Server.Tick();
         }
