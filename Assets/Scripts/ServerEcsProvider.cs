@@ -1,12 +1,11 @@
 using GameLogic;
 using Leopotam.Ecs;
 using RiptideNetworking;
-using Systems;
+using UnityEngine;
+
 
 public class ServerEcsProvider : BaseEcsProvider
 {
-    private ServerSpawnSystem serverSpawnSystem;
-    
     public Server Server
     {
         set
@@ -17,17 +16,14 @@ public class ServerEcsProvider : BaseEcsProvider
         }
     }
 
-    protected override void AddSystems()
+
+    public void SpawnPlayer(ushort clientId)
     {
-        serverSpawnSystem = new ServerSpawnSystem();
-        
-        systems.Add(serverSpawnSystem);
-        
-        base.AddSystems();
+        SpawnSystem.Spawn(clientId, Vector3.zero);
     }
 
-    public void SpawnPlayer(int clientId)
+    public void DestroyPlayer(ushort clientId)
     {
-        serverSpawnSystem.Spawn(clientId);
+        SpawnSystem.Destroy(clientId);
     }
 }

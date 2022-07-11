@@ -44,7 +44,6 @@
      <Compile Include="Assets\Scripts\Network\ServerHandler.cs" />
      <Compile Include="Assets\Scripts\ServerEcsProvider.cs" />
      <Compile Include="Assets\Scripts\Network\ServerControl.cs" />
-     <Compile Include="Assets\Scripts\Systems\ServerSpawnSystem.cs" />
      <None Include="Assets\Scripts\ServerAsmDef.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Unity\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

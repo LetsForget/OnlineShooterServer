@@ -1,3 +1,4 @@
+using GameLogic;
 using RiptideNetworking;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ namespace Network
             ecsProvider.Server = Server;
             
             Server.ClientConnected += OnClientConnected;
+            Server.ClientDisconnected += ServerOnClientDisconnected;
             Server.MessageReceived += OnMessageReceived;
         }
         
@@ -33,7 +35,18 @@ namespace Network
         
         private void OnClientConnected(object sender, ServerClientConnectedEventArgs e)
         {
-            ecsProvider.SpawnPlayer(e.Client.Id);
+            var clientId = e.Client.Id;
+            
+            Server.SendToAll(PlayerSpawnMessage.Create(ref clientId));
+            ecsProvider.SpawnPlayer(clientId);
+        }
+        
+        private void ServerOnClientDisconnected(object sender, ClientDisconnectedEventArgs e)
+        {
+            var clientId = e.Id;
+            
+            Server.SendToAll(PlayerDestroyMessage.Create(ref clientId));
+            ecsProvider.DestroyPlayer(e.Id);
         }
         
         private void OnMessageReceived(object sender, ServerMessageReceivedEventArgs e)
