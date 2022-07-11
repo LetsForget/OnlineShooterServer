@@ -1,10 +1,6 @@
-using System;
 using RiptideNetworking;
-using RiptideNetworking.Utils;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
- 
+
 namespace Network
 {
     public class ServerHandler : MonoBehaviour
@@ -16,6 +12,7 @@ namespace Network
         private void Start()
         {
             Server = new Server();
+            ecsProvider.Server = Server;
             
             Server.ClientConnected += OnClientConnected;
             Server.MessageReceived += OnMessageReceived;
@@ -36,7 +33,7 @@ namespace Network
         
         private void OnClientConnected(object sender, ServerClientConnectedEventArgs e)
         {
-
+            ecsProvider.SpawnPlayer(e.Client.Id);
         }
         
         private void OnMessageReceived(object sender, ServerMessageReceivedEventArgs e)

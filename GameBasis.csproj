@@ -58,9 +58,12 @@
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\BaseEcsProvider.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\NetworkSystem\NetworkSendSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\InputSystem.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\ClientEcsProvider.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\CharacterMovementComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\InputComponent.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\SpawnSystem\SpawnComponent.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\SpawnSystem\SpawnPositions.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\SpawnSystem\SpawnSystem.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Configs\SpawnDataConfig.cs" />
      <None Include="Module\GameBasis\Assets\ExportPackage\package.json" />
      <None Include="Module\GameBasis\Assets\ExportPackage\GameBasis.asmdef" />
      <Reference Include="UnityEngine">

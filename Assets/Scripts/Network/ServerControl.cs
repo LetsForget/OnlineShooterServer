@@ -1,5 +1,4 @@
 ﻿using System;
-using RiptideNetworking;
 using RiptideNetworking.Utils;
 using TMPro;
 using UnityEngine;

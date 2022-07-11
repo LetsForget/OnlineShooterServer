@@ -455,25 +455,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47383ee11c687634a8f8adfd7b0c0d39, type: 3}
---- !u!1 &389770892 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8458085479086532737, guid: 47383ee11c687634a8f8adfd7b0c0d39, type: 3}
-  m_PrefabInstance: {fileID: 389770891}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &389770893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389770892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217d8cdf96eda6c4797f2a614b41c023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugEnabled: 0
-  initOnStart: 0
 --- !u!1 &524261568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53345c9ba0fcccf4d9c1a2926f89989e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ecsProvider: {fileID: 1820681895}
 --- !u!114 &1399471218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1666,6 +1648,53 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1 &1820681894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820681896}
+  - component: {fileID: 1820681895}
+  m_Layer: 0
+  m_Name: ECS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1820681895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820681894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217d8cdf96eda6c4797f2a614b41c023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugEnabled: 0
+  initOnStart: 0
+  spawnDataConfig: {fileID: 11400000, guid: 2977ff41f90c09c4c8cadd4b0fa23b4c, type: 2}
+--- !u!4 &1820681896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820681894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 819.3683, y: -137.09041, z: 398.81592}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1977861907
 GameObject:
   m_ObjectHideFlags: 0
