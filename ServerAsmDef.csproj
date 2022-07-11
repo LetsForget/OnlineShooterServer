@@ -41,7 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Network\ServerLauncher.cs" />
+     <Compile Include="Assets\Scripts\Network\ServerHandler.cs" />
+     <Compile Include="Assets\Scripts\ServerEcsProvider.cs" />
+     <Compile Include="Assets\Scripts\Network\ServerControl.cs" />
      <None Include="Assets\Scripts\ServerAsmDef.asmdef" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Unity\2021.3.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -720,6 +722,14 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="GameBasis.csproj">
+      <Project>{eaf023ab-ea94-5e67-2f16-68cf256f3375}</Project>
+      <Name>GameBasis</Name>
+    </ProjectReference>
+    <ProjectReference Include="Leopotam.Ecs.csproj">
+      <Project>{09701165-3c43-c774-7d09-370b0d882a15}</Project>
+      <Name>Leopotam.Ecs</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
