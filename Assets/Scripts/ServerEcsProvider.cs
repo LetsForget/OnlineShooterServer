@@ -1,11 +1,12 @@
 using GameLogic;
-using Leopotam.Ecs;
 using RiptideNetworking;
 using UnityEngine;
 
-
 public class ServerEcsProvider : BaseEcsProvider
 {
+    private PlayerUpdateSystem<ServerMovementUpdate, ServerPlayerComponent> playerInputUpdateSystem;
+    private SpawnSystem<ServerPlayerComponent> spawnSystem;
+    
     public Server Server
     {
         set
@@ -18,16 +19,32 @@ public class ServerEcsProvider : BaseEcsProvider
 
     public void SpawnPlayer(ushort clientId)
     {
-        SpawnSystem.Spawn(clientId, Vector3.zero);
+        spawnSystem.ServerSpawn(clientId, Vector3.zero);
     }
 
     public void DestroyPlayer(ushort clientId)
     {
-        SpawnSystem.Destroy(clientId);
+        spawnSystem.Destroy(clientId);
     }
 
-    public void AddUpdate(CharacterMovementUpdate update)
+    public void AddUpdate(ServerMovementUpdate update)
     {
-        UpdateReceiveSystem.AddUpdate(update);
+        playerInputUpdateSystem.AddUpdate(update);
+    }
+
+    protected override void AddSystems()
+    {
+        base.AddSystems();
+        systems.Add(spawnSystem = new SpawnSystem<ServerPlayerComponent>())
+            .Add(playerInputUpdateSystem = new PlayerUpdateSystem<ServerMovementUpdate, ServerPlayerComponent>())
+            .Add(new ServerMovementSystem())
+            .Add(new ServerSendSystem())
+            .Add(new ClientIdSetterSystem<ServerPlayerComponent>());
+    }
+
+    protected override void AddOneFrames()
+    {
+        base.AddOneFrames();
+        systems.OneFrame<ServerMovementUpdate>();
     }
 }

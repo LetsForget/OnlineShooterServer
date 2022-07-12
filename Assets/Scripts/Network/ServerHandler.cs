@@ -55,9 +55,8 @@ namespace Network
             {
                 case 1:
                 {
-                    var characterMovementUpdate = CharacterMovementUpdateMessage.Convert(e.Message);
-                    ecsProvider.AddUpdate(characterMovementUpdate);
-                    Server.SendToAll(e.Message);
+                    var playerInputUpdate = ServerMovementUpdateMessage.Convert(e.Message);
+                    ecsProvider.AddUpdate(playerInputUpdate);
                     break;
                 }
             }
