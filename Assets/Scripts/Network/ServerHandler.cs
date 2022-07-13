@@ -1,3 +1,4 @@
+using System.Linq;
 using GameLogic;
 using RiptideNetworking;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace Network
             ecsProvider.Server = Server;
             
             Server.ClientConnected += OnClientConnected;
-            Server.ClientDisconnected += ServerOnClientDisconnected;
+            Server.ClientDisconnected += OnClientDisconnected;
             Server.MessageReceived += OnMessageReceived;
         }
         
@@ -49,12 +50,21 @@ namespace Network
             ecsProvider.SpawnPlayer(clientId);
         }
         
-        private void ServerOnClientDisconnected(object sender, ClientDisconnectedEventArgs e)
+        private void OnClientDisconnected(object sender, ClientDisconnectedEventArgs e)
         {
             var clientId = e.Id;
             
             Server.SendToAll(PlayerDestroyMessage.Create(ref clientId));
             ecsProvider.DestroyPlayer(e.Id);
+        }
+
+        public void OnServerStop()
+        {
+            var keys = ecsProvider.PlayersList.list.Keys.ToList();
+            foreach (var player in keys)
+            {
+                ecsProvider.DestroyPlayer(player);
+            }
         }
         
         private void OnMessageReceived(object sender, ServerMessageReceivedEventArgs e)

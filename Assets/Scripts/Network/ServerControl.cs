@@ -28,6 +28,7 @@ namespace Network
             if (serverHandler.Server.IsRunning)
             {
                 serverHandler.Server.Stop();
+                serverHandler.OnServerStop();
                 
                 portField.interactable = true;
                 RunStopText.text = "Run";
