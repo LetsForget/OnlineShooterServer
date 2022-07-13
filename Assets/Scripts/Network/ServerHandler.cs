@@ -35,6 +35,14 @@ namespace Network
         
         private void OnClientConnected(object sender, ServerClientConnectedEventArgs e)
         {
+            foreach (var player in ecsProvider.PlayersList.list)
+            {
+                var playerKey = player.Key;
+                var spawnMessage = PlayerSpawnMessage.Create(ref playerKey);
+                
+                Server.Send(spawnMessage, e.Client.Id);
+            }
+            
             var clientId = e.Client.Id;
             
             Server.SendToAll(PlayerSpawnMessage.Create(ref clientId));
@@ -55,7 +63,7 @@ namespace Network
             {
                 case 1:
                 {
-                    var playerInputUpdate = ServerMovementUpdateMessage.Convert(e.Message);
+                    var playerInputUpdate = ServerMovementUpdateMessage.Convert(e.Message);                    
                     ecsProvider.AddUpdate(playerInputUpdate);
                     break;
                 }

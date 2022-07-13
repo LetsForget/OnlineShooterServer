@@ -41,7 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Messages\ClientMovementUpdateMessage.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\SpawnSystem\SpawnSystem.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\ClientMovementSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\SpawnSystem\ClientIdSetterSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\ServerMovementSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Messages\PlayerSpawnMessage.cs" />
@@ -49,27 +51,25 @@
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\ObserveSystem\PlayerObserveComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\ObserveSystem\PlayerObserveComponentProvider.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Server\ServerMovementUpdate.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Server\ServerSendSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Client\ClientSendSystem.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\Interfaces\IPlayerUpdate.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Messages\MessagesTypes.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Client\ClientMovementUpdate.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\ObserveSystem\PlayerObserveSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\ServerPlayerComponentProvider.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\PlayerUpdateSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\DebugInputSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Messages\PlayerDestroyMessage.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\BaseEcsProvider.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\InputSystem.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Client\ClientPlayerComponentProvider.cs" />
+     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\Interfaces\IPlayerComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Client\ClientPlayerComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\ServerPlayerComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\PlayersList.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\InputSystem\InputComponent.cs" />
      <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Configs\SpawnDataConfig.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\PlayerUpdateSystem.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Messages\ClientMovementUpdateMessage.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\Interfaces\IPlayerUpdate.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\Interfaces\IPlayerComponent.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Client\ClientMovementUpdate.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\MoveSystem\ClientMovementSystem.cs" />
-     <Compile Include="Module\GameBasis\Assets\ExportPackage\Scripts\Systems\UpdateSystem\Server\ServerSendSystem.cs" />
      <None Include="Module\GameBasis\Assets\ExportPackage\package.json" />
      <None Include="Module\GameBasis\Assets\ExportPackage\GameBasis.asmdef" />
      <Reference Include="UnityEngine">

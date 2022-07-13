@@ -25,6 +25,7 @@ public class ServerEcsProvider : BaseEcsProvider
     public void DestroyPlayer(ushort clientId)
     {
         spawnSystem.Destroy(clientId);
+        playerInputUpdateSystem.OnDestroyPlayer(clientId);
     }
 
     public void AddUpdate(ServerMovementUpdate update)
@@ -40,11 +41,5 @@ public class ServerEcsProvider : BaseEcsProvider
             .Add(new ServerMovementSystem())
             .Add(new ServerSendSystem())
             .Add(new ClientIdSetterSystem<ServerPlayerComponent>());
-    }
-
-    protected override void AddOneFrames()
-    {
-        base.AddOneFrames();
-        systems.OneFrame<ServerMovementUpdate>();
     }
 }
